@@ -9,15 +9,7 @@ The positive and negative sign of the effect can tell us the sign of z score
 negative effect -- negative z score
 postive effect -- positive z score
 ##2.convert Pvalue to z score
-```R
-setwd("/Users/mengtonghu/Desktop/Fall2018/Honors/angst")
-angst<-read.csv("anxiety.meta.full.cc.tbl",sep="\t")
-angst$z<-qnorm(1 - (angst$P.value/2)) 
-#one tail or two tail?? one tail due to null hypothesis
-angst$sign <- 1
-angst$sign[angst$Effect < 0] <- -1
-angst$z<-angst$z*angst$sign
-```
+
 ##3. 
 3.1 Use Bystro to locate SNPS on genes using 1000 genome data
 Bystro can import data from AWS S3, having trouble creating basket.
